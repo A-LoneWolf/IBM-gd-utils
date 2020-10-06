@@ -42,8 +42,8 @@ create_mainfest_file(){
     echo "你的Google team drive ID输入不正确"
     read -p "请输入转存默认目的地ID：" DRIVE_ID
     done
-
-    cd ~ &&
+$IBM_APP_REGION="eu-gb"
+cd ~ &&
     sed -i "s/cloud_fonudray_name/${IBM_APP_NAME}/g" ${SH_PATH}/IBM-gd-utils/manifest.yml &&
     sed -i "s/cloud_fonudray_mem/${IBM_MEM_SIZE}/g" ${SH_PATH}/IBM-gd-utils/manifest.yml && 
     sed -i "s/bot_token/${BOT_TOKEN}/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js &&
